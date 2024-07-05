@@ -1,0 +1,8 @@
+@media (width < 1024px) {
+
+    .caja{
+        width: 90%;
+        background-color: aqua;
+    }
+
+}

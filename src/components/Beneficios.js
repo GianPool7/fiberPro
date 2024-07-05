@@ -1,9 +1,11 @@
-import React from "react";
+//import React from "react";
+import React, { useState } from 'react';
 import subidaDescarga from "../images/Beneficios/Subida-Descarga.png";
 import subida from "../images/Beneficios/s.png";
+import '../responsive.css'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
-export default function Beneficios(){
+const BeneficiosCaja = () =>{
 
     const cajaBeneficios=[
         
@@ -16,21 +18,53 @@ export default function Beneficios(){
 
     ]
 
+    // Estado para los textos
+    const [texts, setTexts] = useState(cajaBeneficios);
+
+    // Función para manejar el evento cuando el mouse entra en un elemento
+    const handleMouseEnter = (index) => {
+        const newItems = [...texts];
+        newItems[index].titulo = newItems[index].contenido;
+        setTexts(newItems);
+    };
+    
+    // Función para manejar el evento cuando el mouse sale de un elemento
+    const handleMouseLeave = (index) => {
+        const newItems = [...texts];
+        newItems[index].titulo = cajaBeneficios[index].titulo;
+        setTexts(newItems);
+    };
+
+
 
     return(
-        <div class="">
+        <div class="p-5 flex flex-wrap justify-center content-center h-2/3">
 
-            <div class="flex flex-wrap gap-10 p-5 place-content-center ">
-                {cajaBeneficios.map((card,index)=>(
-                    <div class="bg-white w-80 p-8 rounded-lg shadow-lg shadow-cyan-500/50"
-                        key={index}>
-                        <img class="w-20 block m-auto p-5" src={card.image} alt=""/>
-                        <h2 class="font-bold">{card.titulo}</h2>
-                    </div>
-                ))}
+            <div class="w-10/12 p-5 flex flex-wrap justify-center content-center gap-10 mt-5 mb-5">
+
+                    {texts.map((cajaBeneficios, index) => (
+
+                        <div class="rounded-lg shadow-lg shadow-black/50 p-5 bg-red-50 w-1/4 h-80"
+                            key={cajaBeneficios.index}
+                            onMouseEnter={() => handleMouseEnter(index)}
+                            onMouseLeave={() => handleMouseLeave(index)}
+                            className='caja' 
+                            //style={{width:"30%",height:"300px"}}
+                            >
+                            <img class="w-40 p-5 block m-auto" src={cajaBeneficios.image} alt=""/>
+                            
+
+                            {cajaBeneficios.titulo}
+                        </div>
+
+                    ))}
+
+                
             </div>
 
         </div>
     );
 
 }
+
+export default BeneficiosCaja;
