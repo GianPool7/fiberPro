@@ -6,47 +6,36 @@ import velocidad  from '../images/Pilares/velocidad.png';
 
 export default function Pilares(){
 
+    const pila=[
+        {image:alcance,descripcion:"VELOCIDAD",subdes:"SIMÉTRICA"},
+        {image:conexion,descripcion:"ALCANCE",subdes:"2.4 GHZ Y 5 GHZ"},
+        {image:fibra,descripcion:"100%",subdes:"FIBRA ÓPTICA"},
+        {image:velocidad,descripcion:"CONEXIÓN",subdes:"MULTIDISPOSITIVO"},
+        
+    ]
+
     return(
 
         <>
-            <div class="flex gap-5 justify-center text-center p-8">
+            <div class="flex flex-wrap gap-5 justify-center text-center p-8 items-center content-center">
 
-                <div className="c1" class=" w-80 bg-black rounded-md p-8">
-                    <div class="flex justify-center">
-                        <img src={alcance} alt="FiberPro" class="w-52" />
-                    </div>
-                    <div class="p-6 text-blue-600">
-                        <h3>VELOCIDAD SIMÉTRICA</h3>
-                    </div>
-                </div>
+                {pila.map((carta,index)=>(
 
-                <div className="c1" class=" w-80 bg-black rounded-md p-8">
-                    <div class="flex justify-center">
-                        <img src={conexion} alt="FiberPro" class="w-52" />
+                    <div className="c1" class=" w-70 bg-white rounded-md p-4 border-solid border-2 border-sky-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 shadow-lg shadow-black/40"
+                        key={index}>
+                        <div class="flex justify-center  w-50 p-2">
+                            <img src={carta.image} alt="FiberPro" class="" />
+                        </div>
+                        <div class="text-blue-600 text-center p-2">
+                            <p class="text-sm">{carta.descripcion}</p>
+                            <p class="text-sm">{carta.subdes}</p>
+                        </div>
                     </div>
-                    <div class="p-6 text-blue-600">
-                        <h3>ALCANCE 2.4 GHZ Y 5 GHZ</h3>
-                    </div>
-                </div>
 
-                <div className="c1" class=" w-80 bg-black rounded-md p-8">
-                    <div class="flex justify-center">
-                        <img src={fibra} alt="FiberPro" class="w-52" />
-                    </div>
-                    <div class="p-6 text-blue-600">
-                        <h3>100% <br/>
-                        FIBRA ÓPTICA</h3>
-                    </div>
-                </div>
+                ))}
 
-                <div className="c1" class=" w-80 bg-black rounded-md p-8">
-                    <div class="flex justify-center">
-                        <img src={velocidad} alt="FiberPro" class="w-52" />
-                    </div>
-                    <div class="p-6 text-blue-600">
-                        <h3>VELOCIDAD</h3>
-                    </div>
-                </div>
+
+
 
             </div>
         </>
