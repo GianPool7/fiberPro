@@ -1,9 +1,9 @@
-import React from "react";
+//import React from "react";
+import React, { useState } from 'react';
 import subidaDescarga from "../images/Beneficios/Subida-Descarga.png";
 import subida from "../images/Beneficios/s.png";
-import '../estilo.css'
 
-export default function Beneficios(){
+const BeneficiosCaja = () =>{
 
     const cajaBeneficios=[
         
@@ -16,13 +16,31 @@ export default function Beneficios(){
 
     ]
 
+    // Estado para los textos
+    const [texts, setTexts] = useState(cajaBeneficios);
+
+    // Función para manejar el evento cuando el mouse entra en un elemento
+    const handleMouseEnter = (index) => {
+        const newItems = [...texts];
+        newItems[index].titulo = newItems[index].contenido;
+        setTexts(newItems);
+    };
+    
+    // Función para manejar el evento cuando el mouse sale de un elemento
+    const handleMouseLeave = (index) => {
+        const newItems = [...texts];
+        newItems[index].titulo = cajaBeneficios[index].titulo;
+        setTexts(newItems);
+    };
+
+
 
     return(
-        <div className="fondoBenefico">
+        <div class="">
 
-            <div class="flex flex-wrap gap-10 p-5 place-content-center w-full">
+            <div class="flex flex-wrap gap-10 p-5 place-content-center ">
                 {cajaBeneficios.map((card,index)=>(
-                    <div class="bg-white xl:h-full xl:w-3/12 p-8 rounded-lg shadow-lg shadow-cyan-500/50 mt-10 mb-10"
+                    <div class="bg-white w-80 p-8 rounded-lg shadow-lg shadow-cyan-500/50"
                         key={index}>
                         <img class="w-20 block m-auto p-5" src={card.image} alt=""/>
                         <h2 class="font-bold">{card.titulo}</h2>
@@ -34,3 +52,5 @@ export default function Beneficios(){
     );
 
 }
+
+export default BeneficiosCaja;

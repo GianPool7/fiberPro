@@ -5,7 +5,7 @@ import Main from './components/Main';
 import Accesos from './components/Accesos';
 import Pilares from './components/Pilares';
 import Planes from './components/Planes';
-import Beneficios from './components/Beneficios';
+import BeneficiosCaja from './components/Beneficios';
 import Banner from './images/banner.webp'
 
 function App() {
@@ -40,6 +40,11 @@ function App() {
       
       <img src={Banner} alt='' class="mt-8"/>
 
+
+
+
+      <div class="">
+
       <div class="p-2">
         <h3 class="text-center text-6xl text-orange-600 leading-loose ">
           ¿POR QUÉ SER UN CLIENTE PRO?
@@ -50,14 +55,10 @@ function App() {
         </h3>
       </div>
 
-
-      <Beneficios/>
-
-
+        <BeneficiosCaja/>
+      </div>
 
 
-
-      <h1 class="text-9xl">a</h1>
 
     </div>
   );
