@@ -27,7 +27,7 @@ export default function Planes(){
 
     return(
         
-        <div class="flex w-90 p-5 mt-5 justify-center" className="fondoss">
+        <div class="flex w-90 p-5 mt-5 justify-center">
 
 
 
@@ -49,7 +49,7 @@ export default function Planes(){
 
                     <SwiperSlide >
                         
-                        <div class="rounded-lg bg-orange-500 w-50 p-5 justify-around m-10 shadow-lg shadow-cyan-500/80"
+                        <div class="rounded-lg bg-orange-500 w-50 p-5 justify-around m-10 shadow-lg shadow-cyan-500/80 mb-20 hover:-translate-y-1 hover:scale-110 duration-300"
                         key={index}>
 
                             <div class="">

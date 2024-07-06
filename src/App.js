@@ -6,9 +6,14 @@ import Accesos from './components/Accesos';
 import Pilares from './components/Pilares';
 import Planes from './components/Planes';
 import BeneficiosCaja from './components/Beneficios';
-import Banner from './images/banner.webp'
+import Banner from './images/banner.webp';
+import Pagina from './components/Ppagina';
+import TikTokEmbed from '../src/components/Tiktok';
 
 function App() {
+
+  const videoId = '7388284660347882758';
+
   return (
     <div className="App">
 
@@ -25,11 +30,11 @@ function App() {
 
       <div class="p-2 ">
         <h3 class="text-center text-6xl text-orange-600 leading-loose ">
-          a
+          INSTALACIÓN GRATIS
         </h3>
         <br/>
-        <h3 class="text-4xl leading-relaxed  ">
-          a 
+        <h3 class="text-3xl leading-relaxed  ">
+          DUPLICAMOS TU VELOCIDAD POR 6 MESES
         </h3>
       </div>
 
@@ -58,6 +63,10 @@ function App() {
         <BeneficiosCaja/>
       </div>
 
+      <TikTokEmbed videoId={videoId} />
+      
+
+      <Pagina/>
 
 
     </div>

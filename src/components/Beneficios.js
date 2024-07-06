@@ -2,8 +2,11 @@
 import React, { useState } from 'react';
 import subidaDescarga from "../images/Beneficios/Subida-Descarga.png";
 import subida from "../images/Beneficios/s.png";
+import { FaArrowDownUpAcrossLine } from "react-icons/fa6";
 
 const BeneficiosCaja = () =>{
+
+
 
     const cajaBeneficios=[
         
@@ -16,36 +19,61 @@ const BeneficiosCaja = () =>{
 
     ]
 
-    // Estado para los textos
-    const [texts, setTexts] = useState(cajaBeneficios);
+    // son para realziar efectos lo que va adentro es como inicializar el texto pero de ahi desaparece
 
-    // Función para manejar el evento cuando el mouse entra en un elemento
-    const handleMouseEnter = (index) => {
-        const newItems = [...texts];
-        newItems[index].titulo = newItems[index].contenido;
-        setTexts(newItems);
-    };
-    
-    // Función para manejar el evento cuando el mouse sale de un elemento
-    const handleMouseLeave = (index) => {
-        const newItems = [...texts];
-        newItems[index].titulo = cajaBeneficios[index].titulo;
-        setTexts(newItems);
-    };
+    /*
 
+    const [text,cambitext]=useState('puede haber un estado 0');
+
+    const handleMouseEnter=()=>{
+        cambitext("adentro");
+    }
+
+    const handleMouseLeave=()=>{
+        cambitext("afuera");
+    }
+
+    */
+
+    const [text,cambitext]=useState(null);
+
+    const handleMouseEnter=(index)=>{
+        cambitext(index);
+    }
+
+    const handleMouseLeave=()=>{
+        cambitext("afuera");
+    }
 
 
     return(
-        <div class="">
+        <div class="p-5">
 
-            <div class="flex flex-wrap gap-10 p-5 place-content-center ">
-                {cajaBeneficios.map((card,index)=>(
-                    <div class="bg-white w-80 p-8 rounded-lg shadow-lg shadow-cyan-500/50"
-                        key={index}>
-                        <img class="w-20 block m-auto p-5" src={card.image} alt=""/>
-                        <h2 class="font-bold">{card.titulo}</h2>
-                    </div>
-                ))}
+            <div class="w-2/3 block m-auto">
+                <div class="flex flex-wrap gap-10 p-5 place-content-center ">
+                    {cajaBeneficios.map((card,index)=>(
+                        <div class="bg-white w-80 p-8 rounded-lg shadow-lg shadow-cyan-500/50"
+                            key={index}
+                            onMouseEnter={()=>handleMouseEnter(index)}
+                            onMouseLeave={handleMouseLeave}
+                            style={{
+                                transition: 'background-color 0.3s, color 0.4s',
+                                cursor:"pointer"
+                            }}
+                            >
+
+                            {text===index ?(
+                                <p>{card.contenido}</p>
+                            ):(
+                                <>
+                                    <img class="w-20 block m-auto p-5" src={card.image} alt=""/>
+                                    <h2 class="font-bold">{card.titulo}</h2>
+                                </>
+                            )}
+                            
+                        </div>
+                    ))}
+                </div>
             </div>
 
         </div>

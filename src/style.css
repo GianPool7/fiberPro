@@ -38,9 +38,3 @@
     object-fit: cover;
   }
   
-.fondoss{
-  background-image: url('./images/fondos/fondos.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
