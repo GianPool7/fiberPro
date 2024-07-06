@@ -5,7 +5,7 @@ export default function Barra() {
     return(
 
         <>
-            <div class="fixed w-full bg-gradient-to-r from-gray-500/50 to-black-500/50">
+            <div class="fixed w-full bg-gradient-to-r from-gray-500/50 to-black-500/50 z-10">
                 <div class=" flex space-x-4 gap-2 place-content-center">
                     
                     <nav class="place-content-center">

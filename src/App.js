@@ -25,11 +25,11 @@ function App() {
 
       <div class="p-2 ">
         <h3 class="text-center text-6xl text-orange-600 leading-loose ">
-          INSTALACIÓN GRATIS
+          a
         </h3>
         <br/>
         <h3 class="text-4xl leading-relaxed  ">
-          DUPLICAMOS TU VELOCIDAD POR 6 MESES
+          a 
         </h3>
       </div>
 
@@ -54,18 +54,10 @@ function App() {
       <Beneficios/>
 
 
-      {/* <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@fiberpro_internet" data-unique-id="fiberpro_internet" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" >
-        <section> 
-            <a target="_blank" href="https://www.tiktok.com/@fiberpro_internet?refer=creator_embed">
-              @fiberpro_internet
-            </a> 
-        </section>
-       </blockquote> 
-       <script async src="https://www.tiktok.com/embed.js"></script> */}
 
 
 
-      <h1 class="text-9xl">Probare haciendo otra interfaz</h1>
+      <h1 class="text-9xl">a</h1>
 
     </div>
   );

@@ -3,6 +3,7 @@ import alcance  from '../images/Pilares/alcance.png';
 import conexion  from '../images/Pilares/conexion.png';
 import fibra  from '../images/Pilares/fibra.png';
 import velocidad  from '../images/Pilares/velocidad.png';
+import '../responsivo.css';
 
 export default function Pilares(){
 
@@ -21,7 +22,7 @@ export default function Pilares(){
 
                 {pila.map((carta,index)=>(
 
-                    <div className="c1" class=" w-70 bg-white rounded-md p-4 border-solid border-2 border-sky-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 shadow-lg shadow-black/40"
+                    <div className="c1" class="xl:h-full xl:w-1/6 bg-white rounded-md p-4 border-solid border-2 border-sky-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 shadow-lg shadow-black/40"
                         key={index}>
                         <div class="flex justify-center  w-50 p-2">
                             <img src={carta.image} alt="FiberPro" class="" />

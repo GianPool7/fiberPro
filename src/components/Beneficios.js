@@ -1,7 +1,7 @@
 import React from "react";
 import subidaDescarga from "../images/Beneficios/Subida-Descarga.png";
 import subida from "../images/Beneficios/s.png";
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import '../estilo.css'
 
 export default function Beneficios(){
 
@@ -18,11 +18,11 @@ export default function Beneficios(){
 
 
     return(
-        <div class="">
+        <div className="fondoBenefico">
 
-            <div class="flex flex-wrap gap-10 p-5 place-content-center ">
+            <div class="flex flex-wrap gap-10 p-5 place-content-center w-full">
                 {cajaBeneficios.map((card,index)=>(
-                    <div class="bg-white w-80 p-8 rounded-lg shadow-lg shadow-cyan-500/50"
+                    <div class="bg-white xl:h-full xl:w-3/12 p-8 rounded-lg shadow-lg shadow-cyan-500/50 mt-10 mb-10"
                         key={index}>
                         <img class="w-20 block m-auto p-5" src={card.image} alt=""/>
                         <h2 class="font-bold">{card.titulo}</h2>
