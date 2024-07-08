@@ -72,9 +72,14 @@ export default function Barra() {
                                     <Link class="text-2xl text-blue-800 font-bold p-4" to="/planes"
                                         onClick={activo}
                                     >
-
+                                        Planes
                                     </Link>
-                                    <a href="" class="text-2xl text-blue-800 font-bold p-4 hover:text-orange-600" >Formas de Pago</a>
+                                    <Link class="text-2xl text-blue-800 font-bold p-4 hover:text-orange-600" to="/formas-pagos">
+                                            Formas de Pago
+                                    </Link>
+                                    <Link to="/error">
+                                    Error
+                                    </Link>
                                     <a href="" class="text-2xl text-blue-800 font-bold p-4" >Cobertura</a>
                                     <a href="" class="text-2xl text-blue-800 font-bold p-4" >Contacto</a>
                                 </nav>

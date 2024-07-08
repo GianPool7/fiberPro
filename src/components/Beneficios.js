@@ -50,7 +50,7 @@ const BeneficiosCaja = () =>{
         <div class="p-5">
 
             <div class="w-2/3 block m-auto">
-                <div class="flex flex-wrap gap-10 p-5 place-content-center ">
+                <div class="flex flex-wrap gap-10 p-5 place-content-center text-center">
                     {cajaBeneficios.map((card,index)=>(
                         <div class="bg-white w-80 p-8 rounded-lg shadow-lg shadow-cyan-500/50"
                             key={index}
