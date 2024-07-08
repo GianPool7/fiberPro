@@ -1,6 +1,6 @@
 import React from "react";
-import mtc from '../svg/mtc.svg';
-import logo from '../images/LOGOTIPO.png'
+import mtc from "../../svg/mtc.svg"
+import logo from '../../images/LOGOTIPO.png'
 
 export default function Pagina(){
 

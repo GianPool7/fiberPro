@@ -1,76 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
-import Barra from './components/Barra';
-import Main from './components/Main';
-import Accesos from './components/Accesos';
-import Pilares from './components/Pilares';
-import Planes from './components/Planes';
-import BeneficiosCaja from './components/Beneficios';
-import Banner from './images/banner.webp';
-import Pagina from './components/Ppagina';
-import TikTokEmbed from '../src/components/Tiktok';
+import Inicio from './Pages/Inicio';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Planes from './Pages/Planes';
+import Barra from './components/Navbar/Barra';
+import Ppagina from './components/Footer/Ppagina'
 
 function App() {
 
-  const videoId = '7388284660347882758';
+    return(
 
-  return (
-    <div className="App">
+        <>
 
-      <Barra/>
+        <Router>
 
-      <header className="App-header">
-        
+            <Barra/>
 
-        <Main></Main>
+            <Routes>
+                <Route path="/" element={<Inicio/>}/>
+                <Route path="/planes" element={<Planes/>}/>
+            </Routes>
 
-      </header>
-
-      <Pilares/>
-
-      <div class="p-2 ">
-        <h3 class="text-center text-6xl text-orange-600 leading-loose ">
-          INSTALACIÓN GRATIS
-        </h3>
-        <br/>
-        <h3 class="text-3xl leading-relaxed  ">
-          DUPLICAMOS TU VELOCIDAD POR 6 MESES
-        </h3>
-      </div>
+        </Router>
 
 
+        <Ppagina/>
 
-      <Planes/>
+        </>
 
-      
-      <img src={Banner} alt='' class="mt-8"/>
+    )
 
-
-
-
-      <div class="">
-
-      <div class="p-2">
-        <h3 class="text-center text-6xl text-orange-600 leading-loose ">
-          ¿POR QUÉ SER UN CLIENTE PRO?
-        </h3>
-        <br/>
-        <h3 class="text-4xl leading-relaxed  ">
-          Conoce los beneficios de ser un cliente PRO
-        </h3>
-      </div>
-
-        <BeneficiosCaja/>
-      </div>
-
-      <TikTokEmbed videoId={videoId} />
-      
-
-      <Pagina/>
-
-
-    </div>
-  );
 }
 
 export default App;
